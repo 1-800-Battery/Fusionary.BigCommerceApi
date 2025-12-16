@@ -18,6 +18,13 @@ public static class BcEndpoint
 
     public static string BrandsV3(BcId brandId) => $"v3/catalog/brands/{brandId}";
 
+    public static string CartV3() => $"v3/carts";
+    public static string CartV3(string cartId) => $"v3/carts/{cartId}";
+    public static string CartRedirectsV3(string cartId) => $"v3/carts/{cartId}/redirect_urls";
+    public static string CartAddV3(string cartId) => $"v3/carts/{cartId}/items";
+    public static string CartLineItemV3(string cartId, string lineItemId) => $"v3/carts/{cartId}/items/{lineItemId}";
+
+
     public static string CategoryImagesV3(BcId categoryId) => $"v3/catalog/categories/{categoryId}/image";
 
     public static string CategoryMetafieldsV3() => $"v3/catalog/categories/metafields";
